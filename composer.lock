@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a71cda3027c60dbafedc63ff347c16e7",
+    "content-hash": "33c3ddf95842a7fccbdffe9a1df2d31a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -7446,24 +7446,23 @@
         },
         {
             "name": "laracasts/generators",
-            "version": "1.2.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laracasts/Laravel-5-Generators-Extended.git",
-                "reference": "555f1b03b6072d5d45616634fc764ccadbe76a35"
+                "reference": "0b8b3d300cc948217f7547502b6de5db6fbafa70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laracasts/Laravel-5-Generators-Extended/zipball/555f1b03b6072d5d45616634fc764ccadbe76a35",
-                "reference": "555f1b03b6072d5d45616634fc764ccadbe76a35",
+                "url": "https://api.github.com/repos/laracasts/Laravel-5-Generators-Extended/zipball/0b8b3d300cc948217f7547502b6de5db6fbafa70",
+                "reference": "0b8b3d300cc948217f7547502b6de5db6fbafa70",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "^5.8|~6.0|~7.0|~8.0",
-                "php": ">=5.4.0"
+                "illuminate/support": "~6.0|~7.0|~8.0"
             },
             "require-dev": {
-                "phpspec/phpspec": "~2.1"
+                "phpspec/phpspec": "~6.0"
             },
             "type": "library",
             "extra": {
@@ -7486,6 +7485,10 @@
                 {
                     "name": "Jeffrey Way",
                     "email": "jeffrey@laracasts.com"
+                },
+                {
+                    "name": "Cristian Tabacitu",
+                    "email": "hello@tabaciu.ro"
                 }
             ],
             "description": "Advanced Laravel generators, that include schema information.",
@@ -7495,9 +7498,9 @@
             ],
             "support": {
                 "issues": "https://github.com/laracasts/Laravel-5-Generators-Extended/issues",
-                "source": "https://github.com/laracasts/Laravel-5-Generators-Extended/tree/1.2.0"
+                "source": "https://github.com/laracasts/Laravel-5-Generators-Extended/tree/2.0.0"
             },
-            "time": "2020-09-10T11:48:15+00:00"
+            "time": "2020-09-10T13:49:13+00:00"
         },
         {
             "name": "laravel/sail",

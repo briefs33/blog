@@ -1,9 +1,9 @@
 <?php
-/*
+/**/
 Route::get('/',function(){
 	return view('welcome');
 });
-*/
+/** /
 Route::get('/', function()
 {
     return 'Hello World';
@@ -12,3 +12,4 @@ Route::get('/', function()
 Route::get('blog',function(){
 	return 'this is a blog';
 });
+/**/

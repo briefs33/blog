@@ -28,7 +28,8 @@
 		"mrmlnc.vscode-apache",
 		"mtxr.sqltools",
 		"mtxr.sqltools-driver-mysql",
-		"primafuture.open-php-html-js-in-browser"
+		"primafuture.open-php-html-js-in-browser",
+		"mahmoudshahin.laravel-routes"
 	],
 
 	// For use with PHP or Apache (e.g.php -S localhost:8080 or apache2ctl start)

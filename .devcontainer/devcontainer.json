@@ -29,7 +29,8 @@
 		"mtxr.sqltools",
 		"mtxr.sqltools-driver-mysql",
 		"primafuture.open-php-html-js-in-browser",
-		"mahmoudshahin.laravel-routes"
+		"mahmoudshahin.laravel-routes",
+		"ms-vscode-remote.remote-containers"
 	],
 
 	// For use with PHP or Apache (e.g.php -S localhost:8080 or apache2ctl start)

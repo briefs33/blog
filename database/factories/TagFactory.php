@@ -15,7 +15,7 @@ class TagFactory extends Factory
     public function definition()
     {
         return [
-            'name' => Str::words($value,2,''),
+            'name' => $this->faker->word,
         ];
     }
 }

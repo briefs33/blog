@@ -15,16 +15,9 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PostController::class, 'index']);
 
-/**/
-Route::get('skuska', function()
-{
-    return 'Hello World';
-});
-
+/** /
 Route::get('blog',function(){
 	return 'this is a blog';
 });

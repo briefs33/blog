@@ -18,7 +18,7 @@ class PostController extends Controller{
     }
 
 	public function show($id){
-        return "Editing post $id";
+        return view('posts.show');
     }
 
 	public function edit($id){

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\PostController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,3 +29,7 @@ Route::get('blog',function(){
 	return 'this is a blog';
 });
 /**/
+
+Route::get('posts', [PostController::class, 'index']);
+
+Route::resource('post','PostController');

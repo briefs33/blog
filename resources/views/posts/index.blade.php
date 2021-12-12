@@ -18,7 +18,7 @@
                 </header>
                 <div class="post-content">
                     <p>
-                        {{ str_limit( $post->text,300) }}
+                        {{ \Illuminate\Support\Str::limit($post, 300, '...') }}
                     </p>
                 </div>
                 <footer class="post-footer">

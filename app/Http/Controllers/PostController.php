@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller{
     public function index(){
-
+        return view('posts.index');
     }
 
     public function create(){
@@ -18,7 +18,7 @@ class PostController extends Controller{
     }
 
 	public function show($id){
-        return "Show post $id";
+        return "Editing post $id";
     }
 
 	public function edit($id){

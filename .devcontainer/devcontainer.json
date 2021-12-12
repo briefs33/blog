@@ -10,16 +10,24 @@
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
 		"sqltools.connections": [{
-			"name": "Container database",
-			"driver": "MariaDB",
-			"server": "localhost",
-			"previewLimit": 50,
-			"port": 3306,
-			"database": "mariadb",
-			"username": "root",
-			"password": "mariadb"
+			"mysqlOptions": {
+				"authProtocol": "default"
+			  },
+			  "previewLimit": 50,
+			  "server": "localhost",
+			  "port": 3306,
+			  "driver": "MariaDB",
+			  "name": "Blog",
+			  "database": "blog",
+			  "username": "root",
+			  "connectionTimeout": 2000,
+			  "password": "WisDomCtai987@"
 		}]
 	},
+
+
+
+
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [

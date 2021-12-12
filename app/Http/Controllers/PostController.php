@@ -17,12 +17,12 @@ class PostController extends Controller{
 
     }
 
-    public function show($id){
-
+	public function show($id){
+        return "Show post $id";
     }
 
 	public function edit($id){
-
+        return "Editing post $id";
     }
 
 	public function update(Request $request){

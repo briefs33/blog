@@ -23,14 +23,6 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"felixfbecker.php-debug",
-		"felixfbecker.php-intellisense",
-		"mrmlnc.vscode-apache",
-		"mtxr.sqltools",
-		"mtxr.sqltools-driver-mysql",
-		"primafuture.open-php-html-js-in-browser",
-		"mahmoudshahin.laravel-routes",
-		"ms-vscode-remote.remote-containers"
 	],
 
 	// For use with PHP or Apache (e.g.php -S localhost:8080 or apache2ctl start)

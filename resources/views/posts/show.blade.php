@@ -3,10 +3,10 @@
 
 @section('content')
 	<section class="box">
-		<article class="post-header">
+		<article class="post full-post">
 			<header class="post-header">
 				<h1 class="box-heading">
-					<a href="">názov postu
+					<a href="">názov postu</a>
 				</h1>
 			</header>
 

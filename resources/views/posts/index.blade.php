@@ -7,8 +7,12 @@
             názov blogu
         </h1>
 
-        <p>
-            tu budú posty
-        </p>
+        @forelse($posts as $post)
+
+        @empty
+
+	        <p>Prázdne, nič sa nenašlo</p>
+
+        @endforelse
     </section>
 @endsection

@@ -234,8 +234,6 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Form' => Collective\Html\HtmlFacade::class,
- //       'Route' => "Illuminate\Support\Facades\Route",
-        
 
     ],
 

@@ -5,13 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>@yield('tittle') / blog</title>
-        <style>
-        </style>
     </head>
 
     <body>
-        <div class="container">
-	        @yield('content')
-        </div>
+        <header class="container">
+
+        </header>
+
+        <main>
+            <div class="container">
+	            @yield('content')
+            </div>
+        </main>
+
+        <footer>
+
+        </footer>
     </body>
 </html>

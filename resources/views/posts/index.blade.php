@@ -9,8 +9,22 @@
 
         @forelse($posts as $post)
 
-            <h1>{{ $post->title }}</h1>
-            <p>{{ $post->text }}</p>
+            <article id="post-{{ $post->id }}" class="post">
+                <header class="post-header">
+                    <h2>
+                        <a href="{{ url('post', $post->id) }}">{{ $post->title }}</a>
+                        <time><small>/ {{ $post->created_at }}</small></time>
+                    </h2>
+                </header>
+                <div class="post-content">
+                    <p>
+                        {{ str_limit( $post->text,300) }}
+                    </p>
+                </div>
+                <footer class="post-footer">
+                    <a href="{{ url('post', $post->id) }}" class="read-more">read more</a>
+                </footer>
+            </article>
 
         @empty
 

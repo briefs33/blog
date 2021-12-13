@@ -16,6 +16,7 @@
                         <a href="{{ url('post', $post->id) }}">{{ $post->title }}</a>
                         <time><small>/ {{ $post->created_at }}</small></time>
                     </h2>
+                    @include('partials.tags')
                 </header>
                 <div class="post-content">
                     <p>

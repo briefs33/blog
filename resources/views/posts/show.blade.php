@@ -25,11 +25,10 @@
 					</small>
 				</p>
 			</div>
-<!--
-			<a href="/post/">
-				<button>Späť</button>
-			</a>
--->
+
+			<footer class="post-footer">
+				@include('partials.tags')
+			</footer>
 		</article>
 	</section>
 @endsection

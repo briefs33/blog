@@ -1,8 +1,7 @@
-<!--@extends('master')
+@extends('master')
 @section('tittle', '404')
 
 @section('content')
--->
     <section class="box">
         <h1>Chyba 404</h1>
 
@@ -12,4 +11,4 @@
             <button>Späť</button>
         </a>
     </section>
-<!--@endsection-->
+@endsection

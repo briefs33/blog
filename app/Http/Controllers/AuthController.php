@@ -26,7 +26,7 @@ class AuthController extends Controller
    
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('master')
+            return redirect()->intended('/')
                         ->withSuccess('Signed in');
         }
   
@@ -52,7 +52,7 @@ class AuthController extends Controller
         $data = $request->all();
         $check = $this->create($data);
          
-        return redirect("master")->withSuccess('You have signed-in');
+        return redirect("/")->withSuccess('You have signed-in');
     }
 
 
@@ -69,7 +69,7 @@ class AuthController extends Controller
     public function master()
     {
         if(Auth::check()){
-            return view('master');
+            return view('/');
         }
   
         return redirect("login")->withSuccess('You are not allowed to access');

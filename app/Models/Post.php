@@ -23,6 +23,9 @@ class Post extends Model
     public function user(){
         return $this->belongsTo('App\Models\User'); //priradenie príspevku User_ovi
     }
+    public function tags(){
+        return $this->belongsToMany('App\Models\Tag'); //priradenie tagov príspevkom
+    }
     public function getCreatedAtAttribute($value){
         return date('j M Y, G:i',strtotime($value)); //upravenie dátumu
     }

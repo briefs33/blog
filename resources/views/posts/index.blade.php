@@ -26,6 +26,8 @@
                 </footer>
             </article>
 
+            <br>
+
         @empty
 
 	        <p>Prázdne, nič sa nenašlo</p>

@@ -18,6 +18,10 @@
 					{{ $post->text }}
 				</p>
 			</div>
+
+			<a href="/">
+				<button>Späť</button>
+			</a>
 		</article>
 	</section>
 @endsection

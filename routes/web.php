@@ -19,7 +19,7 @@ use App\Http\Controllers\TagController;
 
 //index
 Route::get('/', [PostController::class, 'index']);
-
+//Route::get('/', 'PostController@index');
 /*/
 Route::get('blog',function(){
 	return 'this is a blog';

@@ -5,7 +5,7 @@
 @section('content')
     <section class="box post-list">
         <h1 class="box-heading text-muted">
-            {{ $title or "Môj prvý blog vo Visual Studio Code s Laravelom" }}
+            {{ isset($title) ? $title : 'Môj prvý blog vo Visual Studio Code s Laravelom' }}
         </h1>
 
         @forelse($posts as $post)

@@ -1,10 +1,10 @@
 @extends('master')
-@section('tittle','všetky posty')
+@section('tittle','Blog')
 
 @section('content')
     <section class="box post-list">
         <h1 class="box-heading text-muted">
-            názov blogu
+            Môj prvý blog vo Visual Studio Code s Laravelom
         </h1>
 
         @forelse($posts as $post)

@@ -1,4 +1,4 @@
-@extends('app')
+@extends('master')
 
 @section('content')
 <main class="signup-form">

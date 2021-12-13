@@ -27,7 +27,7 @@ Route::get('blog',function(){
 /**/
 
 //Route::get('posts', [PostController::class, 'index']);
-
+//Route::get('post/create', [PostController::class, 'create']);
 
 Route::get('tag/{id}', [TagController::class, 'show']);
 Route::get('user/{id}', [UserController::class, 'show']);

@@ -6,9 +6,10 @@
         <h1>Chyba 404</h1>
 
         <p>Stránka sa nenašla</p>
-
+<!--
         <a href="/">
             <button>Domov</button>
         </a>
+-->
     </section>
 @endsection

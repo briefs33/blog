@@ -19,10 +19,11 @@
 					<!-- {!! $post->rich_text !!} -->
 				</p>
 			</div>
-
+<!--
 			<a href="/post/">
 				<button>Späť</button>
 			</a>
+-->
 		</article>
 	</section>
 @endsection

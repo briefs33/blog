@@ -8,7 +8,7 @@ use Session;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
-class CustomAuthController extends Controller
+class AuthController extends Controller
 {
 
     public function index()

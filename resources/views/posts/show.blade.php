@@ -16,6 +16,7 @@
 			<div class="post-content">
 				<p>
 					{{ $post->text }}
+					<!-- {!! $post->rich_text !!} -->
 				</p>
 			</div>
 

@@ -1,5 +1,5 @@
 @extends('master')
-@section('tittle', $post->title)
+@section('title', $post->title)
 
 @section('content')
 	<section class="box">

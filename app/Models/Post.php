@@ -19,4 +19,17 @@ class Post extends Model
         'text',
         'slug',
     ];
+
+    public function user(){
+        return $this->belongsTo('App\User'); //priradenie príspevku User_ovi
+    }
+    public function getCreatedAttribute($value){
+        return date('j M Y, G:i',strtotime($value)); //upravenie dátumu
+    }
+    public function getTeaserAttribute(){
+        return word_limiter($this->text,60); //obmedzenie textu na 60 slov
+    }
+    public function getRichTextAttribute(){
+        return add_paragraphs(filter_url(e($this->text))); //zalomenie
+    }
 }

@@ -8,7 +8,7 @@ use Session;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
-class AuthController extends Controller
+class CustomAuthController extends Controller
 {
 
     public function index()
@@ -17,7 +17,7 @@ class AuthController extends Controller
     }  
       
 
-    public function Login(Request $request)
+    public function customLogin(Request $request)
     {
         $request->validate([
             'email' => 'required',
@@ -41,7 +41,7 @@ class AuthController extends Controller
     }
       
 
-    public function Registration(Request $request)
+    public function customRegistration(Request $request)
     {  
         $request->validate([
             'name' => 'required',

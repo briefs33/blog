@@ -16,6 +16,14 @@
 			<div class="post-content">
 				{{ $post->text }}
 				<!--{!! $post->rich_text !!}-->
+
+				<p class="written-by small">
+					<small>- written by
+						<a href="{{ url('user', $post->user->id) }}">
+							{{ $post->user->email }}
+						</a>
+					</small>
+				</p>
 			</div>
 <!--
 			<a href="/post/">

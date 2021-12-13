@@ -21,7 +21,7 @@ class Post extends Model
     ];
 
     public function user(){
-        return $this->belongsTo('App\User'); //priradenie príspevku User_ovi
+        return $this->belongsTo('App\Models\User'); //priradenie príspevku User_ovi
     }
     public function getCreatedAtAttribute($value){
         return date('j M Y, G:i',strtotime($value)); //upravenie dátumu
@@ -29,7 +29,7 @@ class Post extends Model
     public function getTeaserAttribute(){
         return word_limiter($this->text,60); //obmedzenie textu na 60 slov
     }
-    public function getRichTextAttribute(){
-        return add_paragraphs(filter_url(e($this->text))); //zalomenie
-    }
+//    public function getRichTextAttribute(){
+//        return add_paragraphs(filter_url(e($this->text))); //zalomenie
+//    }
 }

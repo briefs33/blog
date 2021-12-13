@@ -20,7 +20,7 @@
 				</p>
 			</div>
 
-			<a href="/">
+			<a href="/post/">
 				<button>Späť</button>
 			</a>
 		</article>

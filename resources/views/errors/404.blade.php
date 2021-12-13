@@ -8,7 +8,7 @@
         <p>Stránka sa nenašla</p>
 
         <a href="/">
-            <button>Späť</button>
+            <button>Domov</button>
         </a>
     </section>
 @endsection

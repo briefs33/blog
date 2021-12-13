@@ -23,7 +23,7 @@ class Post extends Model
     public function user(){
         return $this->belongsTo('App\User'); //priradenie príspevku User_ovi
     }
-    public function getCreatedAttribute($value){
+    public function getCreatedAtAttribute($value){
         return date('j M Y, G:i',strtotime($value)); //upravenie dátumu
     }
     public function getTeaserAttribute(){

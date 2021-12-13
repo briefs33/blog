@@ -14,10 +14,8 @@
 			</header>
 
 			<div class="post-content">
-				<p>
-					{{ $post->text }}
-					<!-- {!! $post->rich_text !!} -->
-				</p>
+				{{ $post->text }}
+				<!--{!! $post->rich_text !!}-->
 			</div>
 <!--
 			<a href="/post/">

@@ -1,10 +1,11 @@
 @extends('master')
-@section('tittle','Blog')
+
+@section('title', isset($title) ? $title : 'Blog')
 
 @section('content')
     <section class="box post-list">
         <h1 class="box-heading text-muted">
-            Môj prvý blog vo Visual Studio Code s Laravelom
+            {{ $title or "Môj prvý blog vo Visual Studio Code s Laravelom" }}
         </h1>
 
         @forelse($posts as $post)

@@ -15,20 +15,30 @@ use App\Http\Controllers\PostController;
 |
 */
 
+//index
 Route::get('/', [PostController::class, 'index']);
 
-/** /
+/*/
 Route::get('blog',function(){
 	return 'this is a blog';
 });
 /**/
 
-Route::get('posts', [PostController::class, 'index']);
+//Route::get('posts', [PostController::class, 'index']);
+
+
+Route::get('tag/{id}', [TagController::class, 'show']);
+Route::get('user/{id}', [UserController::class, 'show']);
 
 Route::resource('post','PostController');
 
+//login
 Route::get('login', [AuthController::class, 'index'])->name('login');
 Route::post('custom-login', [AuthController::class, 'customLogin'])->name('login.custom'); 
+
+//registration
 Route::get('registration', [AuthController::class, 'registration'])->name('register-user');
 Route::post('custom-registration', [AuthController::class, 'customRegistration'])->name('register.custom'); 
+
+//logout
 Route::get('signout', [AuthController::class, 'signOut'])->name('signout');

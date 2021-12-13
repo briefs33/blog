@@ -26,7 +26,7 @@ class PostController extends Controller{
     }
 
 	public function show($id){
-        $post = \App\Models\Post::find($id);
+        $post = \App\Models\Post::findOrFail($id);
 
         return view('posts.show')
         ->with('post', $post);

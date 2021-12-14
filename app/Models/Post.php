@@ -35,7 +35,7 @@ class Post extends Model
     }
     public function setTitleAttribute($value){
         $this->attributes['title']=Str::ucfirst($value); //upravenie Názvu postu - velké začiatočné písmeno
-        $this->attributes['title']=$value;
+//        $this->attributes['title']=$value;
         $this->attributes['slug']=Str::slug($value); // pridanie slug_u do DB
     }
 //    public function getRichTextAttribute(){

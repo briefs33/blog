@@ -8,24 +8,20 @@ use Session;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
-class AuthController extends Controller
-{
-
-    public function index()
-    {
+class AuthController extends Controller{
+    public function index(){
         return view('auth.login');
     }  
       
 
-    public function customLogin(Request $request)
-    {
+    public function customLogin(Request $request){
         $request->validate([
             'email' => 'required',
             'password' => 'required',
         ]);
    
         $credentials = $request->only('email', 'password');
-        if (Auth::attempt($credentials)) {
+        if (Auth::attempt($credentials)){
             return redirect()->intended('/')
                         ->withSuccess('Signed in');
         }
@@ -35,14 +31,12 @@ class AuthController extends Controller
 
 
 
-    public function registration()
-    {
+    public function registration(){
         return view('auth.registration');
     }
       
 
-    public function customRegistration(Request $request)
-    {  
+    public function customRegistration(Request $request){  
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users',
@@ -56,8 +50,7 @@ class AuthController extends Controller
     }
 
 
-    public function create(array $data)
-    {
+    public function create(array $data){
       return User::create([
         'name' => $data['name'],
         'email' => $data['email'],
@@ -66,8 +59,7 @@ class AuthController extends Controller
     }    
     
 
-    public function master()
-    {
+    public function master(){
         if(Auth::check()){
             return view('/');
         }
@@ -76,7 +68,7 @@ class AuthController extends Controller
     }
     
 
-    public function signOut() {
+    public function signOut(){
         Session::flush();
         Auth::logout();
   

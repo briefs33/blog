@@ -8,6 +8,7 @@
 				<h1 class="box-heading">
 					<a href="{{ URL::current() }}">{{ $post->title }}</a>
 
+<!-- Neodovzdáva sa $post? -->
 					@can('edit-post', $post)
 						<a href="{{ route('post.edit', post->id) }}" class="btn btn-xs edit-link">
 					@endcan

@@ -44,7 +44,16 @@ class PostController extends Controller{
     }
 
 	public function edit($id){
-        return "Editing post $id";
+        //return "Editing post $id";
+        $post = \App\Models\Post::findOrFail($id);
+        $tags = \App\Models\Tag::all();
+
+        $post->tags; //vo formulári predvyznačí checkbox_i
+
+        return view('posts.edit')
+        ->with('title', 'Edit post')
+        ->with('post', $post)
+        ->with('tags', $tags);
     }
 
 	public function update(Request $request){

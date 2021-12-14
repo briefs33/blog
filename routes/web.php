@@ -17,6 +17,10 @@ use App\Http\Controllers\TagController;
 |
 */
 
+Route::get('example', function(){
+    return 'This is a example Blog';
+});
+
 //index
 Route::get('/', [PostController::class, 'index']);
 

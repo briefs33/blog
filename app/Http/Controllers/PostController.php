@@ -56,8 +56,14 @@ class PostController extends Controller{
         ->with('tags', $tags);
     }
 
-	public function update(Request $request){
+	public function update(SavePostRequest $request, $id){
+        $post = \App\Models\Post::findOrFail($id);
 
+        $post = update( $request->all() );
+
+        $post->tags()->sync( $request->get('tags') ?: []);
+
+        return redirect()->route('post.show',$post->id);
     }
 
     public function destroy($id){

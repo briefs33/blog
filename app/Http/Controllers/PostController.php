@@ -27,13 +27,13 @@ class PostController extends Controller{
         ->with('tags',$tags);
     }
 
-    public function store(Request $request){
-        $post = Auth::user()-posts()->create($request->all());
+    public function store(Requests\SavePostRequest $request){
+//        $post = Auth::user()-posts()->create($request->all());
 
-        $post->tags()->sync($request->get('tags') ?: []);
+//        $post->tags()->sync($request->get('tags') ?: []);
 
-        //return $request->all();
-        return redirect()->route('post.show', $post->id);
+        return $request->all();
+//        return redirect()->route('post.show', $post->id);
     }
 
 	public function show($id){

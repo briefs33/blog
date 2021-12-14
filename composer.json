@@ -11,10 +11,10 @@
         "laravel/framework": "^8.65",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "laravelcollective/html": "^6"
+        "laravelcollective/html": "^6",
+        "barryvdh/laravel-ide-helper": "^2.10"
     },
     "require-dev": {
-        "barryvdh/laravel-ide-helper": "^2.10",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laracasts/generators": "^2.0",

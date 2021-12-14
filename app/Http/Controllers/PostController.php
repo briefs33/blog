@@ -6,6 +6,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller{
     public function index(){
@@ -26,7 +28,12 @@ class PostController extends Controller{
     }
 
     public function store(Request $request){
+        $post = Auth::user()-posts()->create($request->all());
 
+        $post->tags()->sync($request->get('tags') ?: []);
+
+        //return $request->all();
+        return redirect()->route('post.show', $post->id);
     }
 
 	public function show($id){

@@ -18,12 +18,21 @@
 </div>
 
 <div class="form-group">
+    @foreach($tags as $tag)
+        <label class="checkbox">
+            {!! Form::checkbox('tags[]', $tag->id) !!}
+            {{ $tag->name }}
+        </label>
+    @endforeach
+</div>
+
+<div class="form-group">
     {!! Form::button($title, [
         'type'=>'submit',
         'class'=>'btn btn-prymary'
     ]) !!}
 </div>
 
-<span class="or">
-    or {!! link_back('cancel') !!}
-</span>
+<!--span class="or">
+    or {-- link_back('cancel') --}
+</span-->

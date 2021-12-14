@@ -1,5 +1,5 @@
 @extends('master')
-@section('title', $post->title)
+@section('title', isset($post->title) ? $post->title : 'Neodovzdáva sa _post')
 
 @section('content')
 	<section class="box">

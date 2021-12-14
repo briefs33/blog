@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller{
     public function index(){
-        $posts = \App\Models\Post::all();
+        $posts = \App\Models\Post::orderBy('created_at','desc')->get();
 
 //        return $posts;
 

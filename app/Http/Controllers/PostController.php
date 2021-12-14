@@ -28,6 +28,7 @@ class PostController extends Controller{
     }
 
     public function store(Requests\SavePostRequest $request){
+// Chýba Auth v Models
 //        $post = Auth::user()-posts()->create($request->all());
 
 //        $post->tags()->sync($request->get('tags') ?: []);
@@ -46,6 +47,9 @@ class PostController extends Controller{
 	public function edit($id){
         //return "Editing post $id";
         $post = \App\Models\Post::findOrFail($id);
+
+        $this->authorize('edit-post',$post);
+        
         $tags = \App\Models\Tag::all();
 
         $post->tags; //vo formulári predvyznačí checkbox_i
@@ -58,6 +62,8 @@ class PostController extends Controller{
 
 	public function update(Requests\SavePostRequest $request, $id){
         $post = \App\Models\Post::findOrFail($id);
+
+        $this->authorize('edit-post',$post);
 
         $post->update( $request->all() );
 

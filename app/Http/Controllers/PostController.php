@@ -56,10 +56,10 @@ class PostController extends Controller{
         ->with('tags', $tags);
     }
 
-	public function update(SavePostRequest $request, $id){
+	public function update(Requests\SavePostRequest $request, $id){
         $post = \App\Models\Post::findOrFail($id);
 
-        $post = update( $request->all() );
+        $post->update( $request->all() );
 
         $post->tags()->sync( $request->get('tags') ?: []);
 

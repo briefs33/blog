@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -33,9 +34,9 @@ class Post extends Model
         return word_limiter($this->text,60); //obmedzenie textu na 60 slov
     }
     public function setTitleAttribute($value){
-        //$this->attributes['title']=ucfirst($value); //upravenie Názvu postu - velké začiatočné písmeno
+        $this->attributes['title']=Str::ucfirst($value); //upravenie Názvu postu - velké začiatočné písmeno
         $this->attributes['title']=$value;
-        $this->attributes['slug']=str_slug($value); // pridanie slug_u do DB
+        $this->attributes['slug']=Str::slug($value); // pridanie slug_u do DB
     }
 //    public function getRichTextAttribute(){
 //        return add_paragraphs(filter_url(e($this->text))); //zalomenie

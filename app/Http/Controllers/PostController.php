@@ -28,10 +28,9 @@ class PostController extends Controller{
     }
 
     public function store(Requests\SavePostRequest $request){
-// Chyba Auth v Models - Auth::user()-posts()->create($request->all());
-        $post = Auth::user()->posts()->create($request->all());
+        $post = Auth::user()->posts()->create( $request->all() );
 
-        $post->tags()->sync($request->get('tags') ?: []);
+        $post->tags()->sync( $request->get('tags') ?: []);
 
 //        return $request->all();
         return redirect()->route('post.show', $post->id);

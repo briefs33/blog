@@ -10,7 +10,7 @@
 
 <!-- Neodovzdáva sa $post? -->
 					@can('edit-post', $post)
-						<a href="{{ route('post.edit', post->id) }}" class="btn btn-xs edit-link">
+						<a href="{{ route('post.edit', $post->id) }}" class="btn edit-link btn-xs">
 					@endcan
 
 					<time datetime="">

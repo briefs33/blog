@@ -28,12 +28,12 @@ class PostController extends Controller{
     }
 
     public function store(Requests\SavePostRequest $request){
-// Chýba Auth v Models - Auth::user()-posts()->create($request->all());
+// Chyba Auth v Models - Auth::user()-posts()->create($request->all());
         $post = Auth::user()->posts()->create($request->all());
 
         $post->tags()->sync($request->get('tags') ?: []);
 
-        return $request->all();
+//        return $request->all();
         return redirect()->route('post.show', $post->id);
     }
 
@@ -45,7 +45,7 @@ class PostController extends Controller{
     }
 
 	public function edit($id){
-        //return "Editing post $id";
+//        return "Editing post $id";
         $post = \App\Models\Post::findOrFail($id);
 
         $this->authorize('edit-post',$post);

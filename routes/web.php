@@ -42,3 +42,4 @@ Route::post('custom-registration', [AuthController::class, 'customRegistration']
 
 //logout
 Route::get('signout', [AuthController::class, 'signOut'])->name('signout');
+

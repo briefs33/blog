@@ -28,13 +28,13 @@ class PostController extends Controller{
     }
 
     public function store(Requests\SavePostRequest $request){
-// Chýba Auth v Models
-//        $post = Auth::user()-posts()->create($request->all());
+// Chýba Auth v Models - Auth::user()-posts()->create($request->all());
+        $post = Auth::user()->posts()->create($request->all());
 
-//        $post->tags()->sync($request->get('tags') ?: []);
+        $post->tags()->sync($request->get('tags') ?: []);
 
         return $request->all();
-//        return redirect()->route('post.show', $post->id);
+        return redirect()->route('post.show', $post->id);
     }
 
 	public function show($id){

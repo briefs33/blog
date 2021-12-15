@@ -20,8 +20,8 @@
 			</header>
 
 			<div class="post-content">
-				<!--{ $post->text }-->
-				{{ $post->rich_text }}
+				{{ $post->text }}
+				<!--{{ $post->rich_text }}-->
 
 				<p class="written-by small">
 					<small>- written by

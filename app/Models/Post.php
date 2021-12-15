@@ -39,7 +39,8 @@ class Post extends Model
 //        $this->attributes['title']=$value;
         $this->attributes['slug']=Str::slug($value); // pridanie slug_u do DB
     }
-    public function getRichTextAttribute(){
-        return add_paragraphs(filter_url(e($this->text))); //zalomenie
-    }
+//    Je potrebné namapovať helpers.php v App/Http/
+//    public function getRichTextAttribute(){
+//        return add_paragraphs(filter_url(e($this->text))); //zalomenie
+//    }
 }

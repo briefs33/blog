@@ -9,7 +9,7 @@
 					<a href="{{ URL::current() }}">{{ $post->title }}</a>
 
 					@can('edit-post', $post)
-						<a href="{{ route('post.edit', $post->id) }}" class="btn edit-link btn-xs">
+						<a href="{{ route('post.edit', $post->id) }}" class="btn edit-link btn-xs">Upraviť článok</a>
 					@endcan
 
 					<time datetime="">
